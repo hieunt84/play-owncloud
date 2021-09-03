@@ -1,5 +1,5 @@
 #!/bin/bash
-# Script deploy nextcloud with docker-compose
+# Script deploy owncloud with docker-compose
 
 ##########################################################################################
 # SECTION 1: PREPARE
@@ -48,16 +48,15 @@ sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 yum -y install git
 
 #########################################################################################
-# SECTION 3: DEPLOY nextcloud
+# SECTION 3: DEPLOY owncloud
 
-# make directory nextcloud
+# make directory owncloud
 cd ~
-mkdir -p /home/nextcloud
+mkdir -p /home/owncloud
 
 # clone repo
-cd /home/nextcloud
-git clone https://github.com/hieunt84/play-docker.git
-cd ./play-docker/3-docker-compose/
+cd /home/owncloud
+git clone https://github.com/hieunt84/play-owncloud.git
 
 # run docker-compose
 docker-compose up -d
