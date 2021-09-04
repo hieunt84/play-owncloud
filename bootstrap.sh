@@ -36,7 +36,7 @@ END
 # SECTION 2: INSTALL Docker, Docker-compse, git
 # Install docker
 curl -fsSL https://get.docker.com/ | sh
-systemctl start docker
+systemctl restart docker
 systemctl enable docker
 
 # Install docker-compose
@@ -57,6 +57,7 @@ mkdir -p /home/owncloud
 # clone repo
 cd /home/owncloud
 git clone https://github.com/hieunt84/play-owncloud.git
+cd ./play-owncloud
 
 # run docker-compose
 docker-compose up -d
